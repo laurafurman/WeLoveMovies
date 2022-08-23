@@ -1,6 +1,7 @@
 const theatersService = require("./theaters.service");
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 
+// list theaters and what movies are showing
 async function list(req, res) {
   const theaters = await theatersService.list()
   for (let theater of theaters) {
